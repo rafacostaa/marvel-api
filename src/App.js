@@ -1,24 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.scss";
+import Context from "./components/Context/Context";
+import MainContainer from "./components/MainContainer/MainContainer";
+import "./components/main.scss";
+import useDataApi from "./components/service/api";
 
 function App() {
+  const {
+    resultApi: { results },
+  } = useDataApi();
+  console.log("data", results);
+  const banana = process.env;
+  console.log("ENV", banana);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Context.Provider value={results}>
+      <div className="App">
+        <header className="App-header">
+          <MainContainer />
+        </header>
+      </div>
+    </Context.Provider>
   );
 }
 

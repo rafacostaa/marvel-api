@@ -1,0 +1,39 @@
+.container-toolbar {
+  background-color: $palette-color-white-main;
+  height: 64px;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+
+  img {
+    height: 35%;
+  }
+
+  .user {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-around;
+    span:nth-child(1) {
+      font-weight: 600;
+      padding-right: 5px;
+    }
+    .avatar-initial {
+      height: 32px;
+      width: 32px;
+      display: flex;
+      border-radius: 4px;
+      justify-content: center;
+      align-items: center;
+      background-color: $palette-color-gray-off;
+      margin-left: 15px;
+      font-weight: 600;
+    }
+
+    .avatar-initial:hover {
+      background-color: $typography-font-color-main;
+      color: $palette-color-white-main;
+    }
+  }
+}
