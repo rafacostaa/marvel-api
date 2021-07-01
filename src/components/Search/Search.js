@@ -2,10 +2,9 @@ import React from "react";
 import "../main.scss";
 import SearchRoundedIcon from "@material-ui/icons/SearchRounded";
 
-const Search = () => {
-  const handleSearch = (event) => {
-    const query = event.target.value;
-    console.log("input", query);
+const Search = (props) => {
+  const updateSearchValue = (event) => {
+    props.setValue(event.target.value);
   };
   return (
     <>
@@ -14,7 +13,7 @@ const Search = () => {
           type="text"
           placeholder="Search"
           class="search-input"
-          onChange={handleSearch}
+          onChange={updateSearchValue}
         />
         <button>
           <SearchRoundedIcon className="icon" />

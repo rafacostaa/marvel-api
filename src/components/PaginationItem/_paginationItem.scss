@@ -10,7 +10,7 @@
   align-items: center;
   margin: 0;
 
-  li {
+  a {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -22,25 +22,19 @@
     background-color: $palette-color-gray-off;
     border-radius: 3px;
     color: $typography-font-color-main;
-
-    a {
-      text-decoration: none;
-    }
-
-    a:visited {
-      color: $typography-font-color-main;
-    }
+    text-decoration: none;
+   
   }
-  li:hover {
+  a:hover {
     background-color: $palette-color-blue;
-    a {
-      color: $palette-color-white-main;
-    }
+    color: $palette-color-white-main;
+     }
+  a:active {
+    background-color: $palette-color-blue;
+    color: $palette-color-white-main;
   }
-  li.active {
+  a:target {
     background-color: $palette-color-blue;
-    a {
-      color: $palette-color-white-main;
-    }
+    color: $palette-color-white-main;
   }
 }

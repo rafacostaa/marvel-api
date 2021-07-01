@@ -50,5 +50,37 @@
   // border: 1px solid red;
 }
 
+.container-search {
+  background-color: $palette-color-white-main;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  // margin-bottom: 60px;
+  padding: 5px 15px;
+  max-width: 300px;
+  border: 1px solid rebeccapurple;
+
+  input {
+    appearance: none;
+    background: transparent;
+    border: 0;
+    color: inherit;
+    font: inherit;
+    outline: 0;
+    font-style: italic;
+  }
+  button {
+    background-color: transparent;
+    border: none;
+    display: flex;
+  }
+}
+
+.icon {
+  color: $typography-font-color-light;
+}
+
+
 @media only screen and (max-width: 375px) {
 }
