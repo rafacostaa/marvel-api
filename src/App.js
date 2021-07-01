@@ -10,8 +10,9 @@ function App() {
     resultApi: { results },
   } = useDataApi();
   console.log("data", results);
-  const banana = process.env.TOKEN;
-  console.log("ENV", banana);
+
+  const test = process.env.TOKEN;
+  console.log("test", test);
   return (
     <Context.Provider value={results}>
       <div className="App">

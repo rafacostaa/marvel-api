@@ -32,7 +32,7 @@ const List = () => {
   };
   return (
     <>
-      <div class="container-search">
+      <div className="container-search">
         <input
           type="text"
           placeholder="Search"

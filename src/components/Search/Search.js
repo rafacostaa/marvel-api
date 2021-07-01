@@ -8,11 +8,11 @@ const Search = (props) => {
   };
   return (
     <>
-      <div class="container-search">
+      <div className="container-search">
         <input
           type="text"
           placeholder="Search"
-          class="search-input"
+          className="search-input"
           onChange={updateSearchValue}
         />
         <button>

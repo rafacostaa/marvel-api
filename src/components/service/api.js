@@ -2,8 +2,8 @@ import { useEffect, useState } from "react";
 import md5 from "md5";
 
 const ts = Number(new Date());
-const privateKey = "6f381a4da3921d1e9f2ab0c68144d68887d55157";
-const publicKey = "6219e9ab01efc0296384d5fd7dec983a";
+const privateKey = process.env.REACT_APP_TOKEN_PR;
+const publicKey = process.env.REACT_APP_TOKEN_PB;
 const hash = md5(ts + privateKey + publicKey);
 
 export default function useDataApi() {
