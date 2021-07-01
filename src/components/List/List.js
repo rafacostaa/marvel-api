@@ -3,6 +3,8 @@ import ListItem from "../ListItem/ListItem";
 import context from "../Context/Context";
 import SearchRoundedIcon from "@material-ui/icons/SearchRounded";
 import PaginationItem from "../PaginationItem/PaginationItem";
+import { Link, useHistory } from "react-router-dom";
+
 import "../main.scss";
 
 const List = () => {
@@ -26,10 +28,12 @@ const List = () => {
     indexOfFirstPost,
     indexOfLastPost
   );
-  console.log(">>>>", filteredDataSliced);
+
   const paginate = (pageNumber) => {
     setCurrentPage(pageNumber);
   };
+  const history = useHistory();
+
   return (
     <>
       <div className="container-search">
@@ -50,19 +54,21 @@ const List = () => {
       </div>
 
       {filteredDataSliced?.map((item) => (
-        <Fragment key={item.id}>
-          <div className="container-list">
-            <div className="child div1">
-              <img
-                src={`${item.thumbnail.path}.${item.thumbnail.extension}`}
-                alt={item.name}
-              />
-              <h3>{item.name}</h3>
+        <Link to={`/${item.id}`}>
+          <Fragment key={item.id}>
+            <div className="container-list">
+              <div className="child div1">
+                <img
+                  src={`${item.thumbnail.path}.${item.thumbnail.extension}`}
+                  alt={item.name}
+                />
+                <h3>{item.name}</h3>
+              </div>
+              <ListItem data={item.series} />
+              <ListItem data={item.events} />
             </div>
-            <ListItem data={item.series} />
-            <ListItem data={item.events} />
-          </div>
-        </Fragment>
+          </Fragment>
+        </Link>
       ))}
       <PaginationItem
         postsPerPage={postsPerPage}

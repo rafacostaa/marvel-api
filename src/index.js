@@ -4,8 +4,7 @@ import "./index.scss";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 
-require("dotenv").config();
-console.log("env", process.env);
+// require("dotenv").config();
 
 ReactDOM.render(
   <React.StrictMode>
