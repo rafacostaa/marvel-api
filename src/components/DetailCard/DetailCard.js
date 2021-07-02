@@ -9,14 +9,8 @@ const DetailCard = () => {
   const routeMatch = useRouteMatch();
   const { id } = routeMatch.params;
   const idParams = parseInt(id);
-  console.log("det", typeof idParams);
-
   const data = useContext(context);
-  console.log("det", data);
-
   const filter = data?.filter((item) => item.id === idParams);
-  console.log("filter", filter);
-
   const history = useHistory();
 
   return (

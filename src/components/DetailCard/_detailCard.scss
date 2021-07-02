@@ -20,10 +20,9 @@
     background-color: $palette-color-blue;
     color: $palette-color-white-main;
     border: none;
-    box-shadow: 4px 4px 5px 0px rgba(0,0,0,0.21);
+    box-shadow: 4px 4px 5px 0px rgba(0, 0, 0, 0.21);
     display: flex;
     justify-content: center;
-    
   }
 }
 .image-block {
@@ -41,15 +40,12 @@
   h1 {
     margin: 10px;
   }
-
 }
 
 @media only screen and (max-width: 425px) {
-  .container-detail-card{
-    border: 1px solid red;
+  .container-detail-card {
     margin: 20px;
     padding: 20px;
-
 
     img {
       border-radius: 10px;
@@ -57,11 +53,8 @@
       height: 30vh;
     }
 
-    h1{
+    h1 {
       font-size: 25px;
     }
-
-
   }
-
 }

@@ -3,17 +3,14 @@ import ListItem from "../ListItem/ListItem";
 import context from "../Context/Context";
 import SearchRoundedIcon from "@material-ui/icons/SearchRounded";
 import PaginationItem from "../PaginationItem/PaginationItem";
-import { Link, useHistory } from "react-router-dom";
-
+import { useHistory } from "react-router-dom";
 import "../main.scss";
 
 const List = () => {
   const data = useContext(context);
   const [search, setSearch] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
-  const [postsPerPage, setPostsPerPage] = useState(10);
-
-  console.log("list", data);
+  const postsPerPage = 10;
 
   const handleSearch = (event) => {
     setSearch(event.target.value);

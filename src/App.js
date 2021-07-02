@@ -7,8 +7,6 @@ import useDataApi from "./components/service/api";
 import DetailCard from "./components/DetailCard/DetailCard";
 import Toolbar from "./components/Toolbar/Toolbar";
 
-// require("dotenv").config();
-
 function App() {
   const {
     resultApi: { results },

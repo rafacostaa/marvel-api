@@ -25,30 +25,27 @@
   .container-list .div2 {
     display: none;
   }
-  .detail{
-    .container-detail{
-      border: 1px solid green;
+  .detail {
+    .container-detail {
       width: 100%;
     }
-    }
-}
-
-@media only screen and (max-width: 425px) {
-.container{
-  text-align: none;
-}
-
-.container-header{
-  h1{
-    font-size: 26px;
   }
 }
 
-.detail{
-.container-detail{
-  border: 1px solid green;
-  width: 100%;
-}
-}
+@media only screen and (max-width: 425px) {
+  .container {
+    text-align: none;
+  }
 
+  .container-header {
+    h1 {
+      font-size: 26px;
+    }
+  }
+
+  .detail {
+    .container-detail {
+      width: 100%;
+    }
+  }
 }

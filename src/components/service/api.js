@@ -19,7 +19,6 @@ export default function useDataApi() {
       setIsError(false);
       setIsLoading(true);
 
-      //   if (search) {
       try {
         const searchData = await fetch(urlFetch);
         const searchResult = await searchData.json();
@@ -28,7 +27,6 @@ export default function useDataApi() {
         console.error(error);
         setIsError(true);
       }
-      //   }
       setIsLoading(false);
     };
     fetchData();

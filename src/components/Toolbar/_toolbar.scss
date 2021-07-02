@@ -11,7 +11,7 @@
     height: 35%;
   }
 
-  .toolbar-user{
+  .toolbar-user {
     display: flex;
     .user {
       display: flex;
@@ -21,7 +21,7 @@
         font-weight: 600;
         padding-right: 5px;
       }
-  }
+    }
   }
 }
 
@@ -44,10 +44,10 @@
 
 @media only screen and (max-width: 425px) {
   .container-toolbar {
-    .toolbar-user{
+    .toolbar-user {
       .user {
         flex-direction: column;
-    }
+      }
     }
   }
 }
