@@ -3,7 +3,7 @@ import ListItem from "../ListItem/ListItem";
 import context from "../Context/Context";
 import SearchRoundedIcon from "@material-ui/icons/SearchRounded";
 import PaginationItem from "../PaginationItem/PaginationItem";
-import { Link, useHistory } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import "../main.scss";
 
@@ -32,7 +32,6 @@ const List = () => {
   const paginate = (pageNumber) => {
     setCurrentPage(pageNumber);
   };
-  const history = useHistory();
 
   return (
     <>

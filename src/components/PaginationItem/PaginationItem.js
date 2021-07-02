@@ -11,9 +11,9 @@ const PaginationItem = ({ postsPerPage, totalPosts, paginate }) => {
     <>
       <div className="container-pagination">
         {pageNumbers.map((number) => (
-          <a key={number} onClick={() => paginate(number)} href="!#">
+          <button key={number} onClick={() => paginate(number)}>
             {number}
-          </a>
+          </button>
         ))}
       </div>
     </>

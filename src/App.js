@@ -5,6 +5,8 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "./components/main.scss";
 import useDataApi from "./components/service/api";
 import DetailCard from "./components/DetailCard/DetailCard";
+import Toolbar from "./components/Toolbar/Toolbar";
+
 // require("dotenv").config();
 
 function App() {
@@ -14,12 +16,16 @@ function App() {
 
   return (
     <Context.Provider value={results}>
-      <Router>
-        <Switch>
-          <Route path="/" component={MainContainer} exact></Route>
-          <Route path="/:id" component={DetailCard} exact></Route>
-        </Switch>
-      </Router>
+      <div className="container">
+        <Toolbar />
+
+        <Router>
+          <Switch>
+            <Route path="/" component={MainContainer} exact></Route>
+            <Route path="/:id" component={DetailCard} exact></Route>
+          </Switch>
+        </Router>
+      </div>
     </Context.Provider>
   );
 }

@@ -8,13 +8,13 @@ import context from "../Context/Context";
 const MainContainer = () => {
   return (
     <>
-      <div className="container">
-        <Toolbar />
-        <div className="main">
-          <Header />
-          <List />
-        </div>
+      {/* <div className="container"> */}
+      {/* <Toolbar /> */}
+      <div className="main">
+        <Header />
+        <List />
       </div>
+      {/* </div> */}
     </>
   );
 };

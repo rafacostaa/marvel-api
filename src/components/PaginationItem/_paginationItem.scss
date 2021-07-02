@@ -10,7 +10,7 @@
   align-items: center;
   margin: 0;
 
-  a {
+  button {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -23,17 +23,17 @@
     border-radius: 3px;
     color: $typography-font-color-main;
     text-decoration: none;
-   
+    cursor: pointer;
   }
-  a:hover {
-    background-color: $palette-color-blue;
-    color: $palette-color-white-main;
-     }
-  a:active {
+  button:hover {
     background-color: $palette-color-blue;
     color: $palette-color-white-main;
   }
-  a:target {
+  button:active {
+    background-color: $palette-color-blue;
+    color: $palette-color-white-main;
+  }
+  button:target {
     background-color: $palette-color-blue;
     color: $palette-color-white-main;
   }
