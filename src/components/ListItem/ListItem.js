@@ -1,4 +1,5 @@
 import React from "react";
+import { Fragment } from "react";
 import "../main.scss";
 
 const ListItem = ({ data: { items } }) => {
@@ -6,7 +7,9 @@ const ListItem = ({ data: { items } }) => {
   return (
     <div className="child div2">
       {sliced.map((item) => (
-        <span>{item.name}</span>
+        <Fragment key={item.name}>
+          <span>{item.name}</span>
+        </Fragment>
       ))}
     </div>
   );

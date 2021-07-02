@@ -4,6 +4,7 @@ import { useRouteMatch, useHistory } from "react-router-dom";
 import ContainerDetailCard from "../ContainerDetailCard/ContainerDetailCard";
 
 import "../main.scss";
+import { Fragment } from "react";
 
 const DetailCard = () => {
   const routeMatch = useRouteMatch();
@@ -17,7 +18,7 @@ const DetailCard = () => {
     <>
       {filter?.map(
         ({ id, name, thumbnail, comics, events, series, stories }) => (
-          <>
+          <Fragment key={id}>
             <div className="container-detail-card" key={id}>
               <div className="image-block">
                 <img
@@ -34,7 +35,7 @@ const DetailCard = () => {
               </div>
               <button onClick={() => history.push("/")}>Voltar</button>
             </div>
-          </>
+          </Fragment>
         )
       )}
     </>
