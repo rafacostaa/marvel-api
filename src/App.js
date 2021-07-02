@@ -18,7 +18,6 @@ function App() {
     <Context.Provider value={results}>
       <div className="container">
         <Toolbar />
-
         <Router>
           <Switch>
             <Route path="/" component={MainContainer} exact></Route>

@@ -1,22 +1,54 @@
 @import "components/main.scss";
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container {
+  background-color: $palette-color-gray-light;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@media only screen and (max-width: 1024px) {
+  .main {
+    .container-header {
+      align-items: center;
+    }
+    .container-search {
+      max-width: none;
+      margin-bottom: 40px;
+    }
+  }
+
+  .title-list {
+    :nth-child(2),
+    :nth-child(3) {
+      display: none;
+    }
+  }
+
+  .container-list .div2 {
+    display: none;
+  }
+  .detail{
+    .container-detail{
+      border: 1px solid green;
+      width: 100%;
+    }
+    }
+}
+
+@media only screen and (max-width: 425px) {
+.container{
+  text-align: none;
+}
+
+.container-header{
+  h1{
+    font-size: 26px;
   }
 }
 
-// .App-header {
-// background-color: $palette-color-gray-light;
-// min-height: 100vh;
-// display: flex;
-// flex-direction: column;
-// align-items: center;
-// justify-content: center;
-// font-size: calc(10px + 2vmin);
-// }
+.detail{
+.container-detail{
+  border: 1px solid green;
+  width: 100%;
+}
+}
+
+}

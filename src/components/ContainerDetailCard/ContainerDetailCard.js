@@ -7,14 +7,12 @@ const ContainerDetailcard = (data) => {
   } = data;
   return (
     <>
-      <h2>{data.title}</h2>
-      {items.map(({ name }) => (
-        <>
-          <ul className="container-detail">
-            <li>{name}</li>
-          </ul>
-        </>
-      ))}
+      <div className="container-detail">
+        <h2>{data.title}</h2>
+        {items.map(({ name }) => (
+          <li>{name}</li>
+        ))}
+      </div>
     </>
   );
 };

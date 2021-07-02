@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import context from "../Context/Context";
-import { useRouteMatch } from "react-router-dom";
+import { useRouteMatch, useHistory } from "react-router-dom";
 import ContainerDetailCard from "../ContainerDetailCard/ContainerDetailCard";
 
 import "../main.scss";
@@ -17,6 +17,8 @@ const DetailCard = () => {
   const filter = data?.filter((item) => item.id === idParams);
   console.log("filter", filter);
 
+  const history = useHistory();
+
   return (
     <>
       {filter?.map(
@@ -29,13 +31,14 @@ const DetailCard = () => {
                   alt={name}
                 />
               </div>
+              <h1>{name}</h1>
               <div className="detail">
-                <h1>{name}</h1>
                 <ContainerDetailCard title="Comics" data={comics} />
                 <ContainerDetailCard title="Events" data={events} />
                 <ContainerDetailCard title="Series" data={series} />
                 <ContainerDetailCard title="Stories" data={stories} />
               </div>
+              <button onClick={() => history.push("/")}>Voltar</button>
             </div>
           </>
         )

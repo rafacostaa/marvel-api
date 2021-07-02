@@ -4,7 +4,8 @@
   background-color: $palette-color-white-main;
   padding: 20px 24px;
   display: flex;
-  margin: 4px 0;
+  margin: 8px 0;
+  cursor: pointer;
 
   h3 {
     color: $typography-font-color-main;
@@ -43,11 +44,11 @@
   align-items: flex-start;
   justify-content: center;
   font-size: 14px;
+  text-decoration: none;
 }
 
 .child {
   flex: calc(100% / 3);
-  // border: 1px solid red;
 }
 
 .container-search {
@@ -56,10 +57,10 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  // margin-bottom: 60px;
   padding: 5px 15px;
   max-width: 300px;
-  border: 1px solid rebeccapurple;
+  margin-bottom: 40px;
+
 
   input {
     appearance: none;
@@ -79,7 +80,4 @@
 
 .icon {
   color: $typography-font-color-light;
-}
-
-@media only screen and (max-width: 375px) {
 }
